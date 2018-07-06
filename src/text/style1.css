@@ -1,0 +1,103 @@
+/*
+* 初学React，参考大牛代码写的简单的demo，
+*
+* 该demo通过k8s部署在搬瓦工的服务器上，
+* 没钱买域名，暂时通过端口映射，
+* 
+* 首先加点东西, 全局的动画！
+*/
+
+*{
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+/* ！预备*/
+
+html {
+  /* 
+  3，
+  2，
+  1
+  */
+  background: rgb(0,43,54); 
+}
+
+/* 修改注释样式 */
+.token.comment{ 
+    color: white 
+}
+
+
+/*
+
+* 真是很丑的注释！
+* 美化一下！加框！
+*/
+
+.styleArea{
+  color: rgb(222,222,222); 
+  overflow: auto;
+  background: rgb(48, 48, 48);
+  border: 1px solid #ccc;
+  max-height: 44.6%;
+  width: 35%;
+  font-size: 14px;
+  font-family: monospace;
+  padding: 10px 10px 20px;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  white-space: pre-wrap;
+  outline: 0;
+}
+
+
+
+/* 
+* ！
+* 还行
+* 继续美化一波
+
+*/
+
+
+.token.comment{ color: #857F6B; font-style: italic; }
+.token.selector{ color: #E69F0F; }
+.token.property{ color: #64D5EA; }
+.token.punctuation{ color: #64D5EA; }
+.token.function{ color: #BE84F2; }
+
+
+/*
+
+* 还行！
+* 继续，把这个东西往右移动一下！
+* 3，
+* 2，
+* 1
+*/
+
+.styleArea {
+  -webkit-transform: translateX(150%);
+  transform:translateX(150%);
+}
+
+/*
+* 写点其他内容？
+* 来一个打字框！
+*/
+
+.contentArea{
+  position:fixed;
+  top:0;
+  padding: .5em;  margin: .5em;
+  background: white; color: #222;
+  width: 40vw; height:500px; 
+  border: 1px solid;
+  overflow: auto;
+  color: rgb(222,222,222); 
+  background: rgb(48, 48, 48);
+}
+
+/*
+* 开写！
+*/

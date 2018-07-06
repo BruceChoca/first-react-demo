@@ -1,0 +1,16 @@
+/package-lock.json
+/yarn.lock
+/yarn-error.log
+/npm-debug.log
+/node_modules
+/.project
+/.vscode
+/.history
+/.DS_Store
+/*.cmd
+/shell
+/dist
+\.settings/
+build/env.js
+dist/
+/*.cmd

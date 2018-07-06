@@ -1,0 +1,19 @@
+{
+  "name": "first-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "prismjs": "^1.15.0",
+    "raw-loader": "^0.5.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "showdown": "^1.8.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

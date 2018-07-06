@@ -1,0 +1,41 @@
+.contentArea{
+  height:600px;
+}
+
+/* 写完！
+
+再来一点3D效果！
+
+*/
+body {
+  -webkit-perspective: 1000px;
+  perspective:1000px;
+}
+
+/*  预备！duang! */
+.contentArea {
+  -webkit-transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg);
+  transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg);
+}
+
+/*  还没完！ */
+.contentArea {
+  box-shadow: 0px 0px 0px #888888;
+  -webkit-transform: rotateY(10deg);
+  -webkit-transform-origin: left;
+  transform:rotateY(10deg);
+  transform-origin:left;
+}
+
+.styleArea {
+  box-shadow: 0px 0px 0px #888888;
+  -webkit-transform: translateX(150%) rotateY(-10deg);
+  -webkit-transform-origin: right;
+  transform:translateX(150%) rotateY(-10deg);
+  transform-origin: right;
+  max-height: 94.5%;
+}
+
+/* 
+完啦！感觉海星拉！
+*/
