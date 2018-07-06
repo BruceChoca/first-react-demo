@@ -3,8 +3,7 @@ FROM mhart/alpine-node:8.1.2
 LABEL Name=bruce.xiao-firstReact Version=1.1.0 
 COPY package.json /tmp/package.json
 RUN cd /tmp \
-    && npm config set registry=https://registry.npm.taobao.org/ \
-    && npm install 
+    && yarn install 
 
 RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app
 
