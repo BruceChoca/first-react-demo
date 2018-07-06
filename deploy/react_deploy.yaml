@@ -1,0 +1,50 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: firstReact
+  namespace: react-demo
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: react
+        module: demo
+        env: react-demo
+    spec:
+      containers:
+      - name: firstReact
+        image: ccr.ccs.tencentyun.com/boilwater/jenkins/firstReact:IMAGE_VERSION
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: react
+    module: demo
+    env: react-demo
+  name: firstReact
+  namespace: react-demo
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: react
+    module: demo
+    env: react-demo
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: firstReact
+  namespace: react-demo
+spec:
+  rules:
+  - host: www.boilwater.cn
+    http:
+      paths:
+      - path: /bruce
+        backend:
+          serviceName: firstReact
+          servicePort: 80
