@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: firstReact
+  name: first-react
   namespace: react-demo
 spec:
   replicas: 1
@@ -13,7 +13,7 @@ spec:
         env: react-demo
     spec:
       containers:
-      - name: firstReact
+      - name: first-react
         image: ccr.ccs.tencentyun.com/boilwater/react:IMAGE_VERSION
 ---
 kind: Service
@@ -23,7 +23,7 @@ metadata:
     app: react
     module: demo
     env: react-demo
-  name: firstReact
+  name: first-react
   namespace: react-demo
 spec:
   ports:
@@ -37,7 +37,7 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: firstReact
+  name: first-react
   namespace: react-demo
 spec:
   rules:
@@ -46,5 +46,5 @@ spec:
       paths:
       - path: /bruce
         backend:
-          serviceName: firstReact
+          serviceName: first-react
           servicePort: 80
