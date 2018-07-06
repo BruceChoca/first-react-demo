@@ -14,5 +14,5 @@ RUN npm install -g serve
 RUN rm -rf ./src
 RUN rm -rf ./public
 EXPOSE 80
-CMD serve -s build --port 80
+CMD serve -l 80 -s build
 
