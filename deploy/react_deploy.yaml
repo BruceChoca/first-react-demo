@@ -4,7 +4,7 @@ metadata:
   name: firstReact
   namespace: react-demo
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
