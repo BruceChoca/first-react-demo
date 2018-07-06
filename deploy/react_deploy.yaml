@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: firstReact
-        image: ccr.ccs.tencentyun.com/boilwater/jenkins/firstReact:IMAGE_VERSION
+        image: ccr.ccs.tencentyun.com/boilwater/react:IMAGE_VERSION
 ---
 kind: Service
 apiVersion: v1
