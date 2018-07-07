@@ -15,6 +15,9 @@ spec:
       containers:
       - name: first-react
         image: ccr.ccs.tencentyun.com/boilwater/react:IMAGE_VERSION
+        ports:
+        - name: default
+          containerPort: 80
       imagePullSecrets:
       - name: tencentccrsecret
 ---
