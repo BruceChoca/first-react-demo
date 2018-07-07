@@ -1,18 +1,16 @@
 #FROM apobbati/alpine-kubernetes-node:latest
 FROM mhart/alpine-node:8.1.2
 LABEL Name=bruce.xiao-firstReact Version=1.1.0 
-COPY package.json /tmp/package.json
+COPY . /tmp
 RUN cd /tmp \
-    && npm install 
+    && npm install \
+    && yarn run build \
+    && cd build
 
-RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app
-
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY . /usr/src/app
-RUN yarn run build
+COPY /tmp/build/. /usr/src/app
 RUN npm install -g serve
-RUN rm -rf ./src
-RUN rm -rf ./public
 EXPOSE 80
-CMD serve -l 80 build
+CMD serve -l 80
 
