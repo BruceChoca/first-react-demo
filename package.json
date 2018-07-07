@@ -2,7 +2,6 @@
   "name": "first-react",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://www.boilwater.cn/bruce",
   "dependencies": {
     "prismjs": "^1.15.0",
     "raw-loader": "^0.5.1",
