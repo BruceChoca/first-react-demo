@@ -6,6 +6,7 @@ RUN cd /tmp \
     && npm install \
     && yarn run build
 RUN mkdir -p /usr/src/app && mv /tmp/build/* /usr/src/app
+RUN rm -rf /tmp
 WORKDIR /usr/src/app
 RUN npm install -g serve
 EXPOSE 80
