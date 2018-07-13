@@ -9,5 +9,5 @@ RUN mkdir -p /usr/src/app && mv /tmp/build/* /usr/src/app
 WORKDIR /usr/src/app
 RUN npm install -g serve
 EXPOSE 80
-CMD serve -l 80
+CMD node app.js
 
