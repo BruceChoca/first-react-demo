@@ -30,7 +30,7 @@ http.createServer(function(request, response) {
     let pathName = url.parse(requestUrl).pathname;
     pathName = pathName.replace('/bruce', '');
     if(pathName === '/' || pathName.length === 0) { pathName = '/index.html'; }
-    pathName = '\\build\\' + decodeURI(pathName);
+    pathName = '/build/' + decodeURI(pathName);
 
     let filePath = path.resolve(__dirname + pathName);
     console.log(filePath);
